@@ -1,0 +1,9 @@
+Ce projet consiste à automatiser le déploiement d'une application web, 
+hébergée sur GitLab, vers une infrastructure AWS en utilisant Terraform et GitLab CI/CD. 
+L'objectif est de configurer et déployer une architecture cloud simple et réutilisable qui comprend une instance EC2 sur AWS,
+ avec un serveur web Nginx installé, le tout géré par un pipeline CI/CD.
+  Terraform définit les ressources nécessaires sur AWS, telles qu'une VPC, 
+  un sous-réseau public, une passerelle internet, un groupe de sécurité et 
+  une instance EC2. Le pipeline GitLab CI/CD assure l’automatisation complète du processus, 
+  depuis la validation et le plan jusqu'à l’application de la configuration, 
+  permettant ainsi des déploiements rapides et reproductibles à chaque mise à jour du code sur la branche principale.

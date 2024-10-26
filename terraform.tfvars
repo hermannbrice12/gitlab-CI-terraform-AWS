@@ -1,0 +1,1 @@
+key_pair_name = "clessh"  # Remplacez par le nom de votre paire de clés SSH

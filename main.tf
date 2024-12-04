@@ -86,6 +86,7 @@ resource "aws_instance" "web" {
   user_data = <<-EOF
               #!/bin/bash
               yum update -y
+              yum upgrade -y
               amazon-linux-extras install nginx1 -y
               systemctl start nginx
               EOF

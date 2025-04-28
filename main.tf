@@ -1,6 +1,6 @@
 # Fournisseur AWS
 provider "aws" {
-  region = "eu-west-3"  # Région Paris
+  region = "eu-west-2"  # Région Paris
 }
 
 # Création du VPC
@@ -72,11 +72,11 @@ resource "aws_security_group" "sg" {
 
 # Instance EC2 avec Nginx
 resource "aws_instance" "web" {
-  ami                    = "ami-0e41fc02dc8fca79b"  # AMI valide (ex. Amazon Linux 2)
+  ami                    = "ami-0e41fc02dc8fca79b"  
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.public_subnet.id
   associate_public_ip_address = true
-  key_name               = "clessh"  # Remplacez par votre clé SSH
+  key_name               = "clessh"  
   vpc_security_group_ids = [aws_security_group.sg.id]
 
   tags = {
